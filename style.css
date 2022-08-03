@@ -1,0 +1,110 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(#333, #000);
+  height: 100vh;
+}
+
+.mainbox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainbox > label {
+  position: relative;
+  background: #fff;
+  width: 150px;
+  height: 50px;
+  border-radius: 35px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  display: block;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+.mainbox > label:hover {
+  letter-spacing: 2px;
+}
+.mainbox > label::before {
+  content: "取消";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #fff;
+  border-radius: 35px;
+  opacity: 0;
+}
+.mainbox > #check {
+  display: none;
+}
+.mainbox > #check:checked ~ label::before {
+  opacity: 1;
+}
+.mainbox > #check:checked ~ .media-icons {
+  opacity: 1;
+  pointer-events: auto;
+  top: -84px;
+}
+.mainbox > .media-icons {
+  position: absolute;
+  left: 50%;
+  top: -120px;
+  transform: translateX(-50%);
+  background: #fff;
+  width: 140%;
+  height: 110%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 35px;
+  padding: 4px;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+.mainbox > .media-icons::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 50%;
+  background-color: #fff;
+  bottom: -9px;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}
+.mainbox > .media-icons > a {
+  font-size: 22px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+.mainbox > .media-icons > a:hover {
+  transform: translateY(-2px);
+}
+.mainbox > .media-icons > a:nth-child(1):hover {
+  color: #000000;
+}
+.mainbox > .media-icons > a:nth-child(2):hover {
+  color: #7bb32e;
+}
+.mainbox > .media-icons > a:nth-child(3):hover {
+  color: #df2029;
+}
+.mainbox > .media-icons > a:nth-child(4):hover {
+  color: #000000;
+}/*# sourceMappingURL=style.css.map */
